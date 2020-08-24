@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8" />
+    <title></title>
+    <!-- Font-awesome CDN -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fonts name  font-family: 'Roboto', sans-serif;-->
+    <!-- /Fonts -->
+    <!-- animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <!-- Bootstrap LOCAL-->
+    <link rel="stylesheet" href="" />
+    <!-- Main styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="item-1"></div>
+      <div class="item-2"></div>
+      <div class="item-3"></div>
+      <div class="item-4"></div>
+      <div class="item-5"></div>
+    </div>
+    <!-- Header -->
+    <div class="burger-back"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <!-- Логотип и навигация -->
+          <div class="header-head d-flex">
+            <!-- Лого -->
+            <div
+              class="header-head__logo animate__animated animate__bounceInLeft"
+            >
+              <a href="index.html">
+                <img src="img/logo.png" alt="" />
+              </a>
+            </div>
+            <!-- Бургер меню -->
+            <div class="header-burger animate__animated animate__bounceInRight">
+              <span class="header-burger__line"></span>
+            </div>
+            <!-- Навигация -->
+            <nav
+              class="header-head__navigation header-head-navigation animate__animated animate__bounceInRight"
+            >
+              <ul class="header-head-navigation__list d-flex">
+                <a href="#"><li>Студия</li></a>
+                <a href="#"><li>Клиенты</li></a>
+                <a href="#"><li>Магазин</li></a>
+                <a href="#"><li>Контакты</li></a>
+              </ul>
+            </nav>
+            <!-- Корзина -->
+            <div
+              class="header-head__package animate__animated animate__bounceInRight"
+            >
+              Корзина
+              <i class="fas fa-shopping-cart header-head-package__icon"></i>
+            </div>
+          </div>
+          <div class="header__title">
+            <h1>Магазин готовых шаблонов</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /Header -->
+    <!-- 1-st section -->
+    <main class="catalog">
+      <div class="container">
+        <div class="catalog__wrapper d-flex">
+          <!-- Настройки -->
+          <aside class="catalog__settings catalog-settings">
+            <div class="catalog-setting__price--slider-box">
+              <h2 class="catalog-settings__price">Стоимость:</h2>
+              <div class="catalog-setting__sliders">
+                <div class="catalog-settings-mall__box">
+                  <div
+                    class="mall-slider-handles"
+                    data-start="0"
+                    data-end="15000"
+                    data-min="0"
+                    data-max="15000"
+                    data-target="price"
+                    style="width: 210px;"
+                  ></div>
+                </div>
+                <div class="catalog-setting-slider-input__box d-flex">
+                  <div class="catalog-setting-slider__input d-flex">
+                    <div class="catalog-setting-slider-input__text">От</div>
+                    <input
+                      data-min="price"
+                      name="price-min"
+                      value="0"
+                      class="catalog__price catalog-price__from"
+                    />
+                  </div>
+                  <div class="catalog-setting-slider__input d-flex">
+                    <div class="catalog-setting-slider-input__text">До</div>
+                    <input
+                      data-max="price"
+                      name="price-max"
+                      value="15000"
+                      class="catalog__price catalog-price__to"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-grid-checkbox--box">
+              <!-- Радио -->
+              <div class="catalog-grid catalog__grid">
+                <h2
+                  class="catalog-settings__price catalog-setting-price--bottom"
+                >
+                  Сетка:
+                </h2>
+
+                <!-- Радио-инпуты -->
+                <label class="catalog-grid__label d-flex">
+                  <input
+                    type="radio"
+                    name="catalog-grid__radio"
+                    class="catalog-grid__radio"
+                    checked
+                  />
+                  <span class="catalog-grid__fake"></span>
+                  <span class="catalog-grid__text">Адаптивная</span>
+                </label>
+
+                <!-- Радио-инпуты -->
+                <label class="catalog-grid__label d-flex">
+                  <input
+                    type="radio"
+                    name="catalog-grid__radio"
+                    class="catalog-grid__radio"
+                  />
+                  <span class="catalog-grid__fake"></span>
+                  <span class="catalog-grid__text">Фиксированная</span>
+                </label>
+
+                <!-- Радио-инпуты -->
+                <label class="catalog-grid__label d-flex">
+                  <input
+                    type="radio"
+                    name="catalog-grid__radio"
+                    class="catalog-grid__radio"
+                  />
+                  <span class="catalog-grid__fake"></span>
+                  <span class="catalog-grid__text">Резиновая</span>
+                </label>
+              </div>
+
+              <!-- Чекбоксы -->
+              <div class="catalog-special catalog__special">
+                <h2
+                  class="catalog-settings__price catalog-setting-price--bottom"
+                >
+                  Особености:
+                </h2>
+
+                <!-- Сам чекбокс -->
+                <label class="catalog-special__label d-flex">
+                  <input
+                    type="checkbox"
+                    class="catalog-special__checkbox"
+                    name="catalog-special__checkbox--name"
+                    checked
+                  />
+                  <span class="catalog-special__hidden--item"></span>
+                  <span class="catalog-special__text">Слайдер</span>
+                </label>
+
+                <!-- Сам чекбокс -->
+                <label class="catalog-special__label d-flex">
+                  <input
+                    type="checkbox"
+                    class="catalog-special__checkbox"
+                    name="catalog-special__checkbox--name"
+                  />
+                  <span class="catalog-special__hidden--item"></span>
+                  <span class="catalog-special__text">Блок преимуществ</span>
+                </label>
+
+                <!-- Сам чекбокс -->
+                <label class="catalog-special__label d-flex">
+                  <input
+                    type="checkbox"
+                    class="catalog-special__checkbox"
+                    name="catalog-special__checkbox--name"
+                  />
+                  <span class="catalog-special__hidden--item"></span>
+                  <span class="catalog-special__text">Новости</span>
+                </label>
+
+                <!-- Сам чекбокс -->
+                <label class="catalog-special__label d-flex">
+                  <input
+                    type="checkbox"
+                    class="catalog-special__checkbox"
+                    name="catalog-special__checkbox--name"
+                  />
+                  <span class="catalog-special__hidden--item"></span>
+                  <span class="catalog-special__text">Галерея</span>
+                </label>
+
+                <!-- Сам чекбокс -->
+                <label class="catalog-special__label d-flex">
+                  <input
+                    type="checkbox"
+                    class="catalog-special__checkbox"
+                    name="catalog-special__checkbox--name"
+                  />
+                  <span class="catalog-special__hidden--item"></span>
+                  <span class="catalog-special__text">Корзина</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="catalog__btn catalog-btn">
+              <a href="#">Показать</a>
+            </div>
+          </aside>
+          <!-- Секция с содержимим -->
+          <section class="catalog__content catalog-content">
+            <div class="catalog-content__helper catalog-content-helper d-flex">
+              <div class="catalog-content-helper__title">
+                <h2 class="catalog-settings__price">Сортировать:</h2>
+              </div>
+              <div
+                class="catalog-content-helper__more catalog-content-helper-more d-flex"
+              >
+                <!-- Заголовки -->
+                <div
+                  class="catalog-content-helper-more__name content-helper-more d-flex"
+                >
+                  <div
+                    class="content-helper-more__item content-helper-mote--active"
+                  >
+                    <h3>По цене</h3>
+                  </div>
+                  <div class="content-helper-more__item">
+                    <h3>По типу</h3>
+                  </div>
+                  <div class="content-helper-more__item">
+                    <h3>По названию</h3>
+                  </div>
+                </div>
+
+                <!-- Вниз-Вверх -->
+                <div class="catalog-content-helper-more__up--down d-flex">
+                  <i class="fas fa-sort-down"></i>
+                  <i class="fas fa-sort-up"></i>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-content__pages catalog-content-pages">
+              <div
+                class="catalog-content-pages__item content-pages-item d-flex"
+              >
+                <div class="content-pages-item__img">
+                  <div class="content-pages-item__box--relative">
+                    <a href="#" class="relative">
+                      <img src="img/catalog__img.jpg" alt="img" />
+                      <div class="content-pages-item__info pages-item-info">
+                        <div class="pages-item-info__title">
+                          <h4>Sedona</h4>
+                        </div>
+                        <div class="pages-item-info__more">
+                          <h5>Информационный сайт для туристов</h5>
+                        </div>
+                        <div class="pages-item-info__btn">
+                          <div>9 990 руб</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="content-pages-item__box--relative">
+                    <a href="#" class="relative">
+                      <img src="img/catalog__img2.jpg" alt="img" />
+                      <div class="content-pages-item__info pages-item-info">
+                        <div class="pages-item-info__title">
+                          <h4>Sedona</h4>
+                        </div>
+                        <div class="pages-item-info__more">
+                          <h5>Информационный сайт для туристов</h5>
+                        </div>
+                        <div class="pages-item-info__btn">
+                          <div>9 990 руб</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="content-pages-item__box--relative">
+                    <a href="#" class="relative">
+                      <img src="img/catalog__img3.jpg" alt="img" />
+                      <div class="content-pages-item__info pages-item-info">
+                        <div class="pages-item-info__title">
+                          <h4>Sedona</h4>
+                        </div>
+                        <div class="pages-item-info__more">
+                          <h5>Информационный сайт для туристов</h5>
+                        </div>
+                        <div class="pages-item-info__btn">
+                          <div>9 990 руб</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="content-pages-item__img">
+                  <div class="content-pages-item__box--relative">
+                    <a href="#" class="relative">
+                      <img src="img/catalog__img--part2__1.jpg" alt="img" />
+                      <div class="content-pages-item__info pages-item-info">
+                        <div class="pages-item-info__title">
+                          <h4>Sedona</h4>
+                        </div>
+                        <div class="pages-item-info__more">
+                          <h5>Информационный сайт для туристов</h5>
+                        </div>
+                        <div class="pages-item-info__btn">
+                          <div>9 990 руб</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="content-pages-item__box--relative">
+                    <a href="#" class="relative">
+                      <img src="img/catalog__img--part2__2.jpg" alt="img" />
+                      <div class="content-pages-item__info pages-item-info">
+                        <div class="pages-item-info__title">
+                          <h4>Sedona</h4>
+                        </div>
+                        <div class="pages-item-info__more">
+                          <h5>Информационный сайт для туристов</h5>
+                        </div>
+                        <div class="pages-item-info__btn">
+                          <div>9 990 руб</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="content-pages-item__box--relative">
+                    <a href="#" class="relative">
+                      <img src="img/catalog__img--part2__3.jpg" alt="img" />
+                      <div class="content-pages-item__info pages-item-info">
+                        <div class="pages-item-info__title">
+                          <h4>Sedona</h4>
+                        </div>
+                        <div class="pages-item-info__more">
+                          <h5>Информационный сайт для туристов</h5>
+                        </div>
+                        <div class="pages-item-info__btn">
+                          <div>9 990 руб</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="catalog-content__navigation catalog-content-navigation d-flex"
+            >
+              <div
+                class="catalog-content-navigation__num catalog-content-navigation__num--active d-flex"
+              >
+                <a href="#">1</a>
+              </div>
+              <div class="catalog-content-navigation__num d-flex">
+                <a href="#">2</a>
+              </div>
+              <div class="catalog-content-navigation__num d-flex">
+                <a href="#">3</a>
+              </div>
+              <div class="catalog-content-navigation__btn">
+                <a href="#">следующая</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- 1-st section -->
+    <!-- 2nd section map -->
+    <div class="map__box">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.320858715692516!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1596632357806!5m2!1sru!2sus"
+        width="100%"
+        height="415"
+        frameborder="0"
+        style="border: 0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      >
+      </iframe>
+      <div class="map">
+        <div class="container">
+          <div class="map__wrapper">
+            <div class="map__find map-find">
+              <div class="map-title">
+                <h3>NЁRDS DESIGN STUDIO</h3>
+              </div>
+              <div class="map-text">
+                <p>
+                  191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                </p>
+              </div>
+              <div class="map-text">
+                <p>
+                  тел. +7 (812) 275-75-75
+                </p>
+              </div>
+              <div class="map-btn">
+                <a href="#">Напишите нам</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /2-nd section -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer-content d-flex">
+            <div class="footer-content__icons d-flex">
+              <div class="footer-content-icon">
+                <a href="#"><i class="fab fa-vk"></i></a>
+              </div>
+              <div class="footer-content-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <div class="footer-content-icon">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="footer-content__text footer-content-text">
+              <div class="footer-content-text__title">
+                <h3>Давайте дружить, это выгодно!</h3>
+              </div>
+              <div class="footer-content-text__info">
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Скрипты(Scripts) -->
+    <!-- JQuery CDN-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- /JQuery -->
+    <!-- Slick slider Local-->
+    <script src="js/slick.min.js"></script>
+    <!-- /Slick slider -->
+    <!-- NoUiSlider.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.js"></script>
+    <!-- /NoUiSlider.min.js-->
+    <!-- Main JS File -->
+    <script src="js/script.js"></script>
+    <!-- /Main JS File -->
+    <!-- /Скрипты(Scripts) -->
+  </body>
+</html>
